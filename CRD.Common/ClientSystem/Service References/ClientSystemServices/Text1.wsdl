@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetOfficeRebate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ofId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOfficeRebateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOfficeRebateResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OfficeFinanceServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="f" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OfficeFinanceServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfficeFinanceServicesResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addOfficeFinanceOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:OfficeFinance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OfficeFinance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ofId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofOrid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofRemainAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofIsCurrentValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofUserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofNote1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofNote2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addOfficeFinanceOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addOfficeFinanceOneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserInFoFinanceSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="f" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserInFoFinanceSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserInFoFinanceSelectResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserInFoFinanceOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:UserFinance" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserFinance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="URemainAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="UIsCurrentValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UUserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNote1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNote2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UserInFoFinanceOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserInFoFinanceOneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSystemModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:SelectMobile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SelectMobile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="scmId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmOid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="scmNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="scmName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmRemainAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmSubTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmExecTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="scmState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="scmPayPort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="scSelectStart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="scmNote1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="scmNote2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddSystemModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSystemModelResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectSelectMobileByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scmId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectSelectMobileByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectSelectMobileByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectOneSelectStratMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectOneSelectStratMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectOneSelectStratMobileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateOneSelectMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:SelectMobile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateOneSelectMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateOneSelectMobileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="c" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="STResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="STResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PassOrNot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="valation1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valation2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valation3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="n1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="n2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="n3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PassOrNotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PassOrNotResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOfficeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objOfficeInfo" type="tns:OfficeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OfficeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ofParentId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofLogin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofPwd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofLinkman" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofArea" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ofRegTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofNote" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofPara1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ofPara2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateOfficeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOfficeInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_UserPwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_UserPwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_UserPwdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OfficeLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="machineMark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OfficeLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeLoginResult" type="tns:OfficeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderMobileModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:OrderMobile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderMobile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ormId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormOid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormType" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormPayAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormRemainAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormSubTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormExecTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormState" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormPayPort" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormRebate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ormIsReValue" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormNote1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormNote2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ormNote3" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddOrderMobileModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrderMobileModelResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectOrderMobileByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ormId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectOrderMobileByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectOrderMobileByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getnumsofordermobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nums" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getnumsofordermobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getnumsofordermobileResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getrebateofordermobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ofId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getrebateofordermobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getrebateofordermobileResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFunctionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectFunctionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectFunctionInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectHistoryOfOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ofId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtstart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtend" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectHistoryOfOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectHistoryOfOrderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetOfficeRebateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOfficeRebate" />
+  </wsdl:message>
+  <wsdl:message name="GetOfficeRebateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOfficeRebateResponse" />
+  </wsdl:message>
+  <wsdl:message name="OfficeFinanceServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:OfficeFinanceServices" />
+  </wsdl:message>
+  <wsdl:message name="OfficeFinanceServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:OfficeFinanceServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="addOfficeFinanceOneSoapIn">
+    <wsdl:part name="parameters" element="tns:addOfficeFinanceOne" />
+  </wsdl:message>
+  <wsdl:message name="addOfficeFinanceOneSoapOut">
+    <wsdl:part name="parameters" element="tns:addOfficeFinanceOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserInFoFinanceSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:UserInFoFinanceSelect" />
+  </wsdl:message>
+  <wsdl:message name="UserInFoFinanceSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:UserInFoFinanceSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserInFoFinanceOneSoapIn">
+    <wsdl:part name="parameters" element="tns:UserInFoFinanceOne" />
+  </wsdl:message>
+  <wsdl:message name="UserInFoFinanceOneSoapOut">
+    <wsdl:part name="parameters" element="tns:UserInFoFinanceOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSystemModelSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSystemModel" />
+  </wsdl:message>
+  <wsdl:message name="AddSystemModelSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSystemModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectSelectMobileByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectSelectMobileByID" />
+  </wsdl:message>
+  <wsdl:message name="selectSelectMobileByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectSelectMobileByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectOneSelectStratMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:selectOneSelectStratMobile" />
+  </wsdl:message>
+  <wsdl:message name="selectOneSelectStratMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:selectOneSelectStratMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateOneSelectMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:updateOneSelectMobile" />
+  </wsdl:message>
+  <wsdl:message name="updateOneSelectMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:updateOneSelectMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="BTSoapIn">
+    <wsdl:part name="parameters" element="tns:BT" />
+  </wsdl:message>
+  <wsdl:message name="BTSoapOut">
+    <wsdl:part name="parameters" element="tns:BTResponse" />
+  </wsdl:message>
+  <wsdl:message name="STSoapIn">
+    <wsdl:part name="parameters" element="tns:ST" />
+  </wsdl:message>
+  <wsdl:message name="STSoapOut">
+    <wsdl:part name="parameters" element="tns:STResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetXSoapIn">
+    <wsdl:part name="parameters" element="tns:GetX" />
+  </wsdl:message>
+  <wsdl:message name="GetXSoapOut">
+    <wsdl:part name="parameters" element="tns:GetXResponse" />
+  </wsdl:message>
+  <wsdl:message name="PassOrNotSoapIn">
+    <wsdl:part name="parameters" element="tns:PassOrNot" />
+  </wsdl:message>
+  <wsdl:message name="PassOrNotSoapOut">
+    <wsdl:part name="parameters" element="tns:PassOrNotResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfficeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOfficeInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOfficeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOfficeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserPwdSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_UserPwd" />
+  </wsdl:message>
+  <wsdl:message name="Get_UserPwdSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_UserPwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="OfficeLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:OfficeLogin" />
+  </wsdl:message>
+  <wsdl:message name="OfficeLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:OfficeLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderMobileModelSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrderMobileModel" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderMobileModelSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrderMobileModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectOrderMobileByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:selectOrderMobileByID" />
+  </wsdl:message>
+  <wsdl:message name="selectOrderMobileByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:selectOrderMobileByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getnumsofordermobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getnumsofordermobile" />
+  </wsdl:message>
+  <wsdl:message name="getnumsofordermobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getnumsofordermobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getrebateofordermobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getrebateofordermobile" />
+  </wsdl:message>
+  <wsdl:message name="getrebateofordermobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getrebateofordermobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectFunctionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectFunctionInfo" />
+  </wsdl:message>
+  <wsdl:message name="SelectFunctionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectFunctionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectHistoryOfOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectHistoryOfOrder" />
+  </wsdl:message>
+  <wsdl:message name="SelectHistoryOfOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectHistoryOfOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetOfficeRebate">
+      <wsdl:input message="tns:GetOfficeRebateSoapIn" />
+      <wsdl:output message="tns:GetOfficeRebateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OfficeFinanceServices">
+      <wsdl:input message="tns:OfficeFinanceServicesSoapIn" />
+      <wsdl:output message="tns:OfficeFinanceServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addOfficeFinanceOne">
+      <wsdl:input message="tns:addOfficeFinanceOneSoapIn" />
+      <wsdl:output message="tns:addOfficeFinanceOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceSelect">
+      <wsdl:input message="tns:UserInFoFinanceSelectSoapIn" />
+      <wsdl:output message="tns:UserInFoFinanceSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceOne">
+      <wsdl:input message="tns:UserInFoFinanceOneSoapIn" />
+      <wsdl:output message="tns:UserInFoFinanceOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemModel">
+      <wsdl:input message="tns:AddSystemModelSoapIn" />
+      <wsdl:output message="tns:AddSystemModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectSelectMobileByID">
+      <wsdl:input message="tns:selectSelectMobileByIDSoapIn" />
+      <wsdl:output message="tns:selectSelectMobileByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectOneSelectStratMobile">
+      <wsdl:input message="tns:selectOneSelectStratMobileSoapIn" />
+      <wsdl:output message="tns:selectOneSelectStratMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateOneSelectMobile">
+      <wsdl:input message="tns:updateOneSelectMobileSoapIn" />
+      <wsdl:output message="tns:updateOneSelectMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <wsdl:input message="tns:GetListSoapIn" />
+      <wsdl:output message="tns:GetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">沙建文</wsdl:documentation>
+      <wsdl:input message="tns:BTSoapIn" />
+      <wsdl:output message="tns:BTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">沙建文</wsdl:documentation>
+      <wsdl:input message="tns:STSoapIn" />
+      <wsdl:output message="tns:STSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetX">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">沙建文</wsdl:documentation>
+      <wsdl:input message="tns:GetXSoapIn" />
+      <wsdl:output message="tns:GetXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PassOrNot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">沙建文</wsdl:documentation>
+      <wsdl:input message="tns:PassOrNotSoapIn" />
+      <wsdl:output message="tns:PassOrNotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfficeInfo">
+      <wsdl:input message="tns:UpdateOfficeInfoSoapIn" />
+      <wsdl:output message="tns:UpdateOfficeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserPwd">
+      <wsdl:input message="tns:Get_UserPwdSoapIn" />
+      <wsdl:output message="tns:Get_UserPwdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OfficeLogin">
+      <wsdl:input message="tns:OfficeLoginSoapIn" />
+      <wsdl:output message="tns:OfficeLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMobileModel">
+      <wsdl:input message="tns:AddOrderMobileModelSoapIn" />
+      <wsdl:output message="tns:AddOrderMobileModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectOrderMobileByID">
+      <wsdl:input message="tns:selectOrderMobileByIDSoapIn" />
+      <wsdl:output message="tns:selectOrderMobileByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getnumsofordermobile">
+      <wsdl:input message="tns:getnumsofordermobileSoapIn" />
+      <wsdl:output message="tns:getnumsofordermobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getrebateofordermobile">
+      <wsdl:input message="tns:getrebateofordermobileSoapIn" />
+      <wsdl:output message="tns:getrebateofordermobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectFunctionInfo">
+      <wsdl:input message="tns:SelectFunctionInfoSoapIn" />
+      <wsdl:output message="tns:SelectFunctionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectHistoryOfOrder">
+      <wsdl:input message="tns:SelectHistoryOfOrderSoapIn" />
+      <wsdl:output message="tns:SelectHistoryOfOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOfficeRebate">
+      <soap:operation soapAction="http://tempuri.org/GetOfficeRebate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OfficeFinanceServices">
+      <soap:operation soapAction="http://tempuri.org/OfficeFinanceServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOfficeFinanceOne">
+      <soap:operation soapAction="http://tempuri.org/addOfficeFinanceOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceSelect">
+      <soap:operation soapAction="http://tempuri.org/UserInFoFinanceSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceOne">
+      <soap:operation soapAction="http://tempuri.org/UserInFoFinanceOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemModel">
+      <soap:operation soapAction="http://tempuri.org/AddSystemModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectSelectMobileByID">
+      <soap:operation soapAction="http://tempuri.org/selectSelectMobileByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectOneSelectStratMobile">
+      <soap:operation soapAction="http://tempuri.org/selectOneSelectStratMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOneSelectMobile">
+      <soap:operation soapAction="http://tempuri.org/updateOneSelectMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="http://tempuri.org/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BT">
+      <soap:operation soapAction="http://tempuri.org/BT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ST">
+      <soap:operation soapAction="http://tempuri.org/ST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetX">
+      <soap:operation soapAction="http://tempuri.org/GetX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PassOrNot">
+      <soap:operation soapAction="http://tempuri.org/PassOrNot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfficeInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateOfficeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserPwd">
+      <soap:operation soapAction="http://tempuri.org/Get_UserPwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OfficeLogin">
+      <soap:operation soapAction="http://tempuri.org/OfficeLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMobileModel">
+      <soap:operation soapAction="http://tempuri.org/AddOrderMobileModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectOrderMobileByID">
+      <soap:operation soapAction="http://tempuri.org/selectOrderMobileByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnumsofordermobile">
+      <soap:operation soapAction="http://tempuri.org/getnumsofordermobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getrebateofordermobile">
+      <soap:operation soapAction="http://tempuri.org/getrebateofordermobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFunctionInfo">
+      <soap:operation soapAction="http://tempuri.org/SelectFunctionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectHistoryOfOrder">
+      <soap:operation soapAction="http://tempuri.org/SelectHistoryOfOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOfficeRebate">
+      <soap12:operation soapAction="http://tempuri.org/GetOfficeRebate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OfficeFinanceServices">
+      <soap12:operation soapAction="http://tempuri.org/OfficeFinanceServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOfficeFinanceOne">
+      <soap12:operation soapAction="http://tempuri.org/addOfficeFinanceOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceSelect">
+      <soap12:operation soapAction="http://tempuri.org/UserInFoFinanceSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInFoFinanceOne">
+      <soap12:operation soapAction="http://tempuri.org/UserInFoFinanceOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSystemModel">
+      <soap12:operation soapAction="http://tempuri.org/AddSystemModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectSelectMobileByID">
+      <soap12:operation soapAction="http://tempuri.org/selectSelectMobileByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectOneSelectStratMobile">
+      <soap12:operation soapAction="http://tempuri.org/selectOneSelectStratMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOneSelectMobile">
+      <soap12:operation soapAction="http://tempuri.org/updateOneSelectMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetList">
+      <soap12:operation soapAction="http://tempuri.org/GetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BT">
+      <soap12:operation soapAction="http://tempuri.org/BT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ST">
+      <soap12:operation soapAction="http://tempuri.org/ST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetX">
+      <soap12:operation soapAction="http://tempuri.org/GetX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PassOrNot">
+      <soap12:operation soapAction="http://tempuri.org/PassOrNot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOfficeInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOfficeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_UserPwd">
+      <soap12:operation soapAction="http://tempuri.org/Get_UserPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OfficeLogin">
+      <soap12:operation soapAction="http://tempuri.org/OfficeLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMobileModel">
+      <soap12:operation soapAction="http://tempuri.org/AddOrderMobileModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectOrderMobileByID">
+      <soap12:operation soapAction="http://tempuri.org/selectOrderMobileByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getnumsofordermobile">
+      <soap12:operation soapAction="http://tempuri.org/getnumsofordermobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getrebateofordermobile">
+      <soap12:operation soapAction="http://tempuri.org/getrebateofordermobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectFunctionInfo">
+      <soap12:operation soapAction="http://tempuri.org/SelectFunctionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectHistoryOfOrder">
+      <soap12:operation soapAction="http://tempuri.org/SelectHistoryOfOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:4211/Text.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:4211/Text.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

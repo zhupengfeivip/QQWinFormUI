@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRD.Common", "CRD.Common\CRD.Common.csproj", "{7CF59281-C9BA-47CA-B049-644F55E86D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRD.WinUI", "CRD.WinUI\CRD.WinUI.csproj", "{3DA5D631-16F3-4733-9FE0-71EEB24CD493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSystem", "ClientSystem\ClientSystem.csproj", "{5128BE72-E691-4D5F-92BF-AA1E05BC869D}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectUniqueName0 = CRD.Common\\CRD.Common.csproj
+		SccProjectName0 = \u0022$/Integrated\u0020Payment.root/Integrated\u0020Payment/CRD.Common\u0022,\u0020RAAAAAAA
+		SccLocalPath0 = CRD.Common
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = CRD.WinUI\\CRD.WinUI.csproj
+		SccProjectName1 = \u0022$/Integrated\u0020Payment.root/Integrated\u0020Payment/CRD.WinUI\u0022,\u0020BBAAAAAA
+		SccLocalPath1 = CRD.WinUI
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName2 = ClientSystem\\ClientSystem.csproj
+		SccProjectName2 = \u0022$/Integrated\u0020Payment.root/Integrated\u0020Payment/ClientSystem\u0022,\u0020FAAAAAAA
+		SccLocalPath2 = ClientSystem
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Release|.NET.ActiveCfg = Release|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7CF59281-C9BA-47CA-B049-644F55E86D36}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Release|.NET.ActiveCfg = Release|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3DA5D631-16F3-4733-9FE0-71EEB24CD493}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Release|.NET.ActiveCfg = Release|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5128BE72-E691-4D5F-92BF-AA1E05BC869D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
